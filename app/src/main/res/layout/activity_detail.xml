@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252836"
+    android:id="@+id/main"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/bottomBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/posterImage"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/avatar_detail" />
+
+            <ImageButton
+                android:id="@+id/bt_back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/back"
+                app:tint="#FFFFFF"
+                android:background="#252836"
+                android:layout_margin="15dp"
+                android:padding="10dp"
+                android:contentDescription="TODO"
+                />
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/fav"
+                app:tint="#FF0000"
+                android:background="#252836"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/bt_back"
+                android:padding="10dp"
+                tools:ignore="TouchTargetSizeCheck"
+                android:contentDescription="TODO"
+                />
+
+            <TextView
+                android:id="@+id/movieTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avatar: The Way to Water"
+                android:textSize="22sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_below="@id/posterImage"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="16dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/ratingLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/movieTitle"
+                android:paddingLeft="16dp"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:text="⭐ 8.5"
+                    android:textColor="#FFD700"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+
+                <TextView
+                    android:text="⏱️ 2.15 hours"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/genreLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ratingLayout"
+                android:layout_marginTop="12dp"
+                android:paddingLeft="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Drama"
+                    android:textStyle="bold"
+                    android:background="#252836"
+                    android:textColor="#FFFFFF"
+                    android:padding="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Crime"
+                    android:textStyle="bold"
+                    android:background="#252836"
+                    android:textColor="#FFFFFF"
+                    android:padding="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Action"
+                    android:textStyle="bold"
+                    android:background="#252836"
+                    android:textColor="#FFFFFF"
+                    android:padding="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+             </LinearLayout>
+
+            <TextView
+                android:id="@+id/summaryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Summary"
+                android:textColor="#FF9800"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_below="@id/genreLayout"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/summaryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Discover a world of enchanting visuals and epic storytelling in Avatar: The Way to Water. Directed by visionary filmmaker James Cameron, this highly anticipated sequel to the groundbreaking original promises to transport you to the mesmerizing realm of Pandora once again. Set in the lush and vibrant underwater habitats of Pandora, this cinematic masterpiece unravels an extraordinary adventure. As the Na’vi navigate the depths, you’ll embark on a journey that blends cutting-edge technology with a tale of environmental harmony and the resilience of the human spirit."
+                android:textColor="#CCCCCC"
+                android:textSize="13sp"
+                android:layout_below="@id/summaryTitle"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/actorsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Actors"
+                android:textColor="#FF9800"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_below="@id/summaryText"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="10dp"/>
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/sam"
+                android:scaleType="centerCrop"
+                android:padding="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/actorsTitle"/>
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/weaver"
+                android:layout_marginEnd="8dp"
+                android:scaleType="centerCrop"
+                android:padding="5dp"
+                android:layout_below="@+id/actorsTitle"
+                android:layout_toRightOf="@+id/img1"
+                android:layout_marginLeft="10dp"
+                />
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/zoe"
+                android:layout_marginEnd="8dp"
+                android:scaleType="centerCrop"
+                android:padding="5dp"
+                android:layout_below="@+id/actorsTitle"
+                android:layout_toRightOf="@+id/img2"
+                android:layout_marginLeft="10dp"
+                />
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ribisi"
+                android:layout_marginEnd="8dp"
+                android:scaleType="centerCrop"
+                android:padding="5dp"
+                android:layout_below="@+id/actorsTitle"
+                android:layout_toRightOf="@+id/img3"
+                android:layout_marginLeft="10dp"
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-8dp"
+        android:background="#1E1E1E"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_home"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home"
+                app:tint="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="#CCCCCC"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_search"
+                app:tint="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:textColor="#CCCCCC"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_fav"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_favorite"
+                app:tint="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorites"
+                android:textColor="#CCCCCC"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_settings"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_settings"
+                app:tint="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textColor="#CCCCCC"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+
